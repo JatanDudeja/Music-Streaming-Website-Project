@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
+
 <body>
     <div class="player" id="musicPlayer">
-        <div class="songDetails">
-            <div class="now-playing">Playing x of y</div>
-            <div class="songArt"></div>
-            <div class="songName">Song Name</div>
-            <div class="songArtist">Artist Name</div>
-        </div>
+        <div class="collector">
+            <div class="songDetails">
+                <div class="now-playing">Playing x of y</div>
+                <div class="songArt"></div>
+                <div class="songName">Song Name</div>
+                <div class="songArtist">Artist Name</div>
+            </div>
 
-            <div class="musicSlider">
+            <div class="slider">
                 <div class="starTime">00:00</div>
-                <input type="range" class="slider" min="1" max="100">
+                <input type="range" class="musicSlider" min="1" max="100">
                 <div class="endTime">00:00</div>
             </div>
 
 
-            <div class="volumeSlider">
+            <div class="slider">
                 <i class="volumeDown"></i>
-                <input type="range" class="volumerSlide" min="1" max="100">
+                <input type="range" class="volumeSlider" min="1" max="100">
                 <i class="volumeUp"></i>
             </div>
 
 
-            <div class="controls">
+            <!-- <div class="controls">
                 <div class="shuffle">
-                    <i class="shuffleButton"></i>
+                    <i class="shuffleButton" title="random"></i>
                 </div>
                 <div class="previous">
                     <i class="previousSong"></i>
@@ -45,11 +52,30 @@
                 <div class="replay">
                     <i class="replayButton"></i>
                 </div>
+            </div> -->
+
+
+
+            <div class="buttons">
+                <div class="randomTrack" onclick="randomTrack()">
+                    <i class="fas fa-random fa-2x" title="random"></i>
+                </div>
+                <div class="prevTrack" onclick="prevTrack()">
+                     <i class="fa fa-step-backward fa-2x"></i>
+                 </div>
+                 <div class="playpauseTrack" onclick="playpauseTrack()">
+                     <i class="fa fa-play-circle fa-5x"></i>
+                 </div>
+                 <div class="nextTrack" onclick="nextTrack()">
+                     <i class="fa fa-step-forward fa-2x"></i>
+                 </div>
+                 <div class="repeatTrack" onclick="repeatTrack()">
+                     <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                 </div>
             </div>
 
-
-
-
+        </div>
     </div>
 </body>
+
 </html>
