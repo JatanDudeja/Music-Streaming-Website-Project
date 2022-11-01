@@ -1,73 +1,95 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
 .player{
-    height: 100vh;
-    border: 2px solid black;
+    height: 95vh;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
-
-.collector{
+.wrapper{
     border: 1px solid transparent;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 30px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-
-
-.songDetails{
+.details{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
-
-
-.songArt{
+.track-art{
+    margin: 25px;
     height: 250px;
     width: 250px;
-    margin: 25px;
+    border: 2px solid #fff;
+    background-size: cover;
     background-position: center;
     border-radius: 50%;
-    /* border: 2px solid red; */
+    -moz-box-shadow: 0px 6px 5px #ccc;
+    -webkit-box-shadow:0px 6px 5px #ccc;
     box-shadow: 0px 6px 5px #ccc;
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius: 190px;
 }
-
-
-.songName{
-    font-size: 40px;
+.now-playing{
+    font-size: 1rem;
 }
-
-
-.songArtist{
-    font-size: 20px;
+.track-name{
+    font-size: 2.5rem;
 }
-
-
-.slider{
+.track-artist{
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+.buttons{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    /* margin-top: 20px;
-    margin-bottom: 20px; */
-    
+    margin-bottom: 30px;
 }
-
-.musicSlider, .volumeSlider{
+.active{
+    color: black;
+}
+.repeat-track,
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track{
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .2s;
+}
+.repeat-track:hover,
+.random-track:hover,
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover{
+    opacity: 1.0;
+}
+.slider_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seek_slider,
+.volume_slider{
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     height: 5px;
     background: #83a9ff;
+    -webkit-transition: .2s;
     transition: opacity .2s;
 }
-
-
-.musicSlider:hover, .volumeSlider:hover{
-    opacity: 1;
-}
-
-
-.musicSlider::-webkit-slider-thumb, .volumeSlider::-webkit-slider-thumb{
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     width: 15px;
     height: 15px;
@@ -76,48 +98,31 @@
     cursor: pointer;
     border-radius: 100%;
 }
-
-
-.musicSlider{
+.seek_slider:hover,
+.volume_slider:hover{
+    opacity: 1.0;
+}
+.seek_slider{
     width: 60%;
 }
-
-.volumeSlider{
-    width: 40%;
+.volume_slider{
+    width: 30%;
 }
-
-
-.buttons{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.current-time,
+.total-duration{
+    padding: 10px;
 }
-
-
-
-.randomTrack, .nextTrack, .prevTrack, .repeatTrack, .playpauseTrack{
-    padding: 20px;
-    opacity: 0.8;
-    transition: opacity 0.2s;
-    
+i.fa-volume-down,
+i.fa-volume-up{
+    padding: 10px;
 }
-
-
-.point{
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward{
     cursor: pointer;
 }
-
-.lines{
-    background: #f1f1f1;
-    height: 150%;
-    width: 10px;
-    border-radius: 50px;
-    margin: 0px 5px;
-    animation: animate 1.4s linear infinite;
-}
-
-
 .randomActive{
     color: black;
 }
@@ -138,8 +143,14 @@
     justify-content: center;
     align-items: center;
 }
-
-
+.loader .stroke{
+    background: #f1f1f1;
+    height: 150%;
+    width: 10px;
+    border-radius: 50px;
+    margin: 0px 5px;
+    animation: animate 1.4s linear infinite;
+}
 @keyframes animate{
     50%{
         height: 20%;
@@ -149,24 +160,24 @@
         height: 100%;
     }
 }
-.lines:nth-child(1){
+.stroke:nth-child(1){
     animation-delay: 0s;
 }
-.lines:nth-child(2){
+.stroke:nth-child(2){
     animation-delay: 0.3s;
 }
-.lines:nth-child(3){
+.stroke:nth-child(3){
     animation-delay: 0.6s;
 }
-.lines:nth-child(4){
+.stroke:nth-child(4){
     animation-delay: 0.9s;
 }
-.lines:nth-child(5){
+.stroke:nth-child(5){
     animation-delay: 0.6s;
 }
-.lines:nth-child(6){
+.stroke:nth-child(6){
     animation-delay: 0.3s;
 }
-.lines:nth-child(7){
+.stroke:nth-child(7){
     animation-delay: 0s;
 }
