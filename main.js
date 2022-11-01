@@ -28,22 +28,22 @@ let updateTimer;
 
 const music_list = [
     {
-        img : 'images/Dont_Look.jpeg',
+        img : 'Images/Dont_Look.jpeg',
         name : "Don't Look",
         artist : 'Karan Aujla',
-        music : 'music/Dont_Look.mp3'
+        music : 'Music/Dont_Look.mp3'
     },
     {
-        img : 'images/5_Goliyan.jpeg',
+        img : 'Images/5_Goliyan.jpeg',
         name : '5 Goliyan',
         artist : 'Saabi Bhinder',
-        music : 'music/5_Goliyan.mp3'
+        music : 'Music/5_Goliyan.mp3'
     },
     {
-        img : 'images/DeathRoute.jpg',
+        img : 'Images/DeathRoute.jpg',
         name : 'Death Route',
         artist : 'Sidhu Moosewala',
-        music : 'music/DeathRoute.mp3'
+        music : 'Music/DeathRoute.mp3'
     }
 ];
 
